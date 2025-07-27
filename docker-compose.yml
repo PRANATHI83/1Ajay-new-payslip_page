@@ -13,17 +13,17 @@ services:
   employee_payslip:
     build: ./Employee_Payslip
     ports:
-      - "8888:80"
+      - "8890:80"
 
   hr_payslip:
     build: ./HR_Payslip
     ports:
-      - "8889:80"
+      - "8891:80"
 
   postgres:
     image: postgres:15
     ports:
-      - "5888:5432"
+      - "5889:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin234
@@ -40,5 +40,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.13.0.0/16
+        - subnet: 172.50.0.0/16
 
